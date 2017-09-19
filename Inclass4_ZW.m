@@ -1,3 +1,5 @@
+%Looks good. See minor comments below. 1/1.
+
 %Inclass assignment 4. Due at the start of class on 9/12/17
 
 %1. (a) Write code that makes a file with the words "Random numbers 1" on its
@@ -21,6 +23,7 @@ first_line=fgetl(myfile);
 line1=fgetl(myfile);
 string_line=strsplit(line1, ','); 
 num_line=cellfun(@str2num, string_line)
+%AW: this works fine. Note there is no need to store the first_line variable since you don't use it. 
 
 % 2. Write a function that takes an array as input and returns a logical
 % variable which is true if the sum of the numbers in the array is greater
@@ -29,3 +32,4 @@ sum_function(rand(1,20))
 function logical = sum_function(i)
     logical = sum(i)>10;
 end
+%AW: this is also ok, but note that inside your function you have overwritten the builtin keyword logical. 
